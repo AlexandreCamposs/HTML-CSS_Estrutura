@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Exemplo</title>
+</head>
+
+<body>
+  <html>
+
   <head>
-    <meta charset="UTF-8" />
-    <title>Exemplo</title>
+    <title>Forms</title>
   </head>
 
   <body>
-     
+    <form action="http://www.example.com/review.php" method="get">
+      <fieldset>
+        <legend>Seus detalhes:</legend>
+        <label>Nome: <input type="text" name="name" size="30" maxlength="100"></label><br />
+        <label>Email: <input type="email" name="email" size="30" maxlength="100"></label><br />
+      </fieldset><br />
+      <fieldset>
+        <legend>Sua revisão</legend>
+        <p>
+          <label for="hear-about">Como você ficou sabendo sobre nós?</label>
+          <select name="referrer" id="hear-about">
+            <option value="google">Google</option>
+            <option value="friend">Amigos</option>
+            <option value="advert">Advert</option>
+            <option value="other">Outros</option>
+          </select>
+        </p>
+        <p>
+          Você visitaria novamente?<br />
+          <label><input type="radio" name="rating" value="yes" /> Sim</label>
+          <label><input type="radio" name="rating" value="no" /> Não</label>
+          <label><input type="radio" name="rating" value="maybe" /> Talvez</label>
+        </p>
+        <p>
+          <label for="comments">Comentário:</label><br />
+          <textarea rows="4" cols="40" id="comments"></textarea>
+        </p>
+        <label><input type="checkbox" name="subscribe" checked="checked" /> Inscreva-me para atualizações por
+          e-mail</label><br />
+        <input type="submit" value="Submit review" />
+      </fieldset>
+    </form>
   </body>
+
+  </html>
+</body>
+
 </html>
